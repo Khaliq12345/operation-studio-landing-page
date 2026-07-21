@@ -1,43 +1,79 @@
-# sv
+# OpsEngine
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+OpsEngine is a modern infrastructure management and DevOps automation platform designed to streamline workflows, enhance system reliability, and simplify deployment tracking.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project
-npx sv create my-app
+* **Infrastructure Oversight:** Real-time visibility into your deployments and system status.
+* **DevOps Automation:** Streamlined pipelines and configuration management.
+* **High-Performance UI:** Built with modern web technologies for a fast, responsive user experience.
+* **Secure Architecture:** Production-ready configuration supporting SSL/TLS, custom security headers, and reverse proxy management via Nginx.
+
+---
+
+## Tech Stack
+
+* **Frontend / Framework:** [Nuxt](https://nuxt.com/) / Vue.js
+* **Language:** TypeScript / JavaScript
+* **Server / Proxy:** Nginx
+* **Environment:** Node.js
+
+---
+
+## Getting Started
+
+Follow these instructions to set up the project locally for development and testing.
+
+### Prerequisites
+
+* Node.js (v18+ recommended)
+* npm, pnpm, or yarn
+
+### Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-username/opsengine.git
+cd opsengine
+
 ```
 
-To recreate this project with the same configuration:
 
-```sh
-# recreate this project
-npx sv@0.16.3 create --template minimal --types ts --add tailwindcss="plugins:none" --install npm .
+2. **Install dependencies:**
+```bash
+npm install
+
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+3. **Run the development server:**
+```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
 
-To create a production version of your app:
+The application will run locally at `http://localhost:5173`.
 
-```sh
+---
+
+## Production Deployment
+
+OpsEngine is configured to run behind an Nginx reverse proxy in production environments.
+
+1. Build the application for production:
+```bash
 npm run build
+
 ```
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-# operation-studio-landing-page
+2. Configure your Nginx server block to proxy requests to your local application port (default: `5173`). Ensure your domain is whitelisted in your Nuxt/Vite configuration under `server.allowedHosts`.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
