@@ -84,16 +84,14 @@
 
 			<div class="flex flex-col gap-6">
 				{#each features as feature}
+					{@const Icon = feature.icon}
 					<Item.Root
 						class="flex items-start gap-4 p-0 border-0 bg-transparent shadow-none"
 					>
 						<div
 							class="text-emerald-500 mt-1 shrink-0"
 						>
-							<svelte:component
-								this={feature.icon}
-								class="h-6 w-6"
-							/>
+							<Icon class="h-6 w-6" />
 						</div>
 						<Item.Content class="space-y-1">
 							<Item.Title
