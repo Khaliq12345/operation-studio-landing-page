@@ -61,8 +61,8 @@
 		</div>
 
 		<!-- Mobile: Hamburger Toggle -->
-		<button
-			class="md:hidden relative z-50 p-2 text-foreground focus:outline-none"
+		<Button
+			class="md:hidden relative z-50 p-2"
 			onclick={toggleMenu}
 			aria-label="Toggle navigation menu"
 		>
@@ -71,7 +71,7 @@
 			{:else}
 				<Menu class="h-6 w-6" strokeWidth={2} />
 			{/if}
-		</button>
+		</Button>
 	</nav>
 
 	<!-- Mobile Dropdown Menu -->

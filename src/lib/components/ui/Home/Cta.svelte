@@ -3,7 +3,7 @@
 </script>
 
 <section
-	class="w-full flex items-center justify-center md:px-6 py-20 bg-slate-100"
+	class="w-full flex items-center justify-center md:px-6 py-20 bg-slate-100 p-2"
 >
 	<!-- Main Callout Box -->
 	<div
