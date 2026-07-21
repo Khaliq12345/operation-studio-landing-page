@@ -62,7 +62,7 @@
 
 		<!-- Mobile: Hamburger Toggle -->
 		<Button
-			class="md:hidden relative z-50 p-2"
+			class="md:hidden p-2"
 			onclick={toggleMenu}
 			aria-label="Toggle navigation menu"
 		>
