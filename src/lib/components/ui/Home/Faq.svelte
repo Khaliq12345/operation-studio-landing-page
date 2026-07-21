@@ -1,23 +1,5 @@
 <script lang="ts">
 	import * as Accordion from "$lib/components/ui/accordion/index.js";
-
-	const faqs = [
-		{
-			id: "item-1",
-			question: "How long does it take to build a custom tool?",
-			answer: "Most custom tools are designed, built, and deployed in 2–4 weeks. You will typically get to test a working beta version within the first few days.",
-		},
-		{
-			id: "item-2",
-			question: "Why not just use Airtable or Monday.com?",
-			answer: "No-code platforms are great to start with, but quickly hit performance bottlenecks, strict row limits, and formula bugs as your team grows. We build database-backed custom software that fits your exact workflow without rigid monthly per-seat constraints.",
-		},
-		{
-			id: "item-3",
-			question: "What happens if our process changes?",
-			answer: "Because the software is completely custom, updating logic or adding new features is simple. We provide ongoing support and maintenance so your tools easily evolve alongside your operations.",
-		},
-	];
 </script>
 
 <section
@@ -34,23 +16,75 @@
 
 		<!-- Accordion List -->
 		<Accordion.Root type="single" class="w-full">
-			{#each faqs as faq}
-				<Accordion.Item
-					value={faq.id}
-					class="border-b border-slate-200"
+			<Accordion.Item
+				value="item-1"
+				class="border-b border-slate-200"
+			>
+				<Accordion.Trigger
+					class="flex w-full items-center justify-between py-5 text-left font-bold text-base md:text-lg text-slate-900 transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
 				>
-					<Accordion.Trigger
-						class="flex w-full items-center justify-between py-5 text-left font-bold text-base md:text-lg text-slate-900 transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
+					<span
+						>How long does it take to build
+						a custom tool?</span
 					>
-						<span>{faq.question}</span>
-					</Accordion.Trigger>
-					<Accordion.Content
-						class="pb-5 text-sm md:text-base text-slate-600 leading-relaxed"
+				</Accordion.Trigger>
+				<Accordion.Content
+					class="pb-5 text-sm md:text-base text-slate-600 leading-relaxed"
+				>
+					Most custom tools are designed, built,
+					and deployed in 2–4 weeks. You will
+					typically get to test a working beta
+					version within the first few days.
+				</Accordion.Content>
+			</Accordion.Item>
+
+			<Accordion.Item
+				value="item-2"
+				class="border-b border-slate-200"
+			>
+				<Accordion.Trigger
+					class="flex w-full items-center justify-between py-5 text-left font-bold text-base md:text-lg text-slate-900 transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
+				>
+					<span
+						>Why not just use Airtable or
+						Monday.com?</span
 					>
-						{faq.answer}
-					</Accordion.Content>
-				</Accordion.Item>
-			{/each}
+				</Accordion.Trigger>
+				<Accordion.Content
+					class="pb-5 text-sm md:text-base text-slate-600 leading-relaxed"
+				>
+					No-code platforms are great to start
+					with, but quickly hit performance
+					bottlenecks, strict row limits, and
+					formula bugs as your team grows. We
+					build database-backed custom software
+					that fits your exact workflow without
+					rigid monthly per-seat constraints.
+				</Accordion.Content>
+			</Accordion.Item>
+
+			<Accordion.Item
+				value="item-3"
+				class="border-b border-slate-200"
+			>
+				<Accordion.Trigger
+					class="flex w-full items-center justify-between py-5 text-left font-bold text-base md:text-lg text-slate-900 transition-all hover:no-underline [&[data-state=open]>svg]:rotate-180"
+				>
+					<span
+						>What happens if our process
+						changes?</span
+					>
+				</Accordion.Trigger>
+				<Accordion.Content
+					class="pb-5 text-sm md:text-base text-slate-600 leading-relaxed"
+				>
+					Because the software is completely
+					custom, updating logic or adding new
+					features is simple. We provide ongoing
+					support and maintenance so your tools
+					easily evolve alongside your operations.
+				</Accordion.Content>
+			</Accordion.Item>
 		</Accordion.Root>
 	</div>
 </section>
