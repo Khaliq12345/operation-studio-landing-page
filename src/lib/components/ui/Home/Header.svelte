@@ -61,15 +61,22 @@
 		</div>
 
 		<!-- Mobile: Hamburger Toggle -->
+		<!-- Mobile: Hamburger Toggle -->
 		<Button
 			class="md:hidden p-2"
 			onclick={toggleMenu}
 			aria-label="Toggle navigation menu"
 		>
 			{#if isMobileMenuOpen}
-				<X class="h-6 w-6" strokeWidth={2} />
+				<X
+					class="h-6 w-6 pointer-events-none"
+					strokeWidth={2}
+				/>
 			{:else}
-				<Menu class="h-6 w-6" strokeWidth={2} />
+				<Menu
+					class="h-6 w-6 pointer-events-none"
+					strokeWidth={2}
+				/>
 			{/if}
 		</Button>
 	</nav>
